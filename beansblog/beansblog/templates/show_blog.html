@@ -1,0 +1,24 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script type="text/javascript" charset="utf-8">
+			window.UEDITOR_HOME_URL = "/static/js/ueditor/";
+		</script>
+		<script type="text/javascript" charset="utf-8" src="/static/js/ueditor/editor_config.js">
+		</script>
+		<script type="text/javascript" charset="utf-8" src="/static/js/ueditor/editor_all_min.js">
+		</script>
+		<link rel="stylesheet" type="text/css" href="/static/js/ueditor/themes/default/ueditor.css"/>
+	</head>
+	<body>
+		{% if form.erros %}
+			<p style="color: red;">
+				Please correct the error{{form.erros|pluralize }} below.
+			</p>
+		{% endif%}
+		
+		<table>
+			{{ form.as_table }}
+		</table>
+	</body>
+</html>
